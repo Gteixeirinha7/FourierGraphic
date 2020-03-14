@@ -2,11 +2,21 @@
 <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-app="fourierApp">
     <head>
         <title>FourierGraphic</title>
-        <script src="/script.js"></script>
-        <link href="/style.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.angularjs.org/1.6.0/angular.js"></script>
+        <script src="https://code.angularjs.org/1.6.0/angular-route.js"></script>
+        <script src="scripts/chartist.js"></script>
+        <script src="scripts/jquery-1.5.2.js"></script>
+        <link href="scripts/chartist.css" rel="stylesheet" type="text/css" />
         <meta charset="utf-8">
     </head>
-    <body>
-        <div id="graphic" class="mainDiv" ng-controller="FourierController as appCtrl" ng-init="init()" >
+    <body  ng-app="fourierApp" ng-controller="FourierController as appCtrl" ng-init="init()" >
+          <label for="fname">Final do RA:</label>
+          <input type="number" id="fname" name="fname" ng-model="base.selectedRA"><br><br>
+          <label for="lname">Termos:</label>
+          <input type="number" id="lname" name="lname" ng-model="base.iterator"><br><br>
+          <input type="submit" ng-click="init()">
+        <div id="graphic" class="ct-chart ct-perfect-fourth"></div>
     </body>
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </html>
