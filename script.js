@@ -18,7 +18,7 @@
             var frequencyMax = (scope.base.freqQtd - 1) / (scope.base.selectedRA * 100);
             var diffFreq = (frequencyMax - frquencyMin) / scope.base.time;
             for (var i = 0; i <= scope.base.time; i++) {
-                var xValue = (frquencyMin + (diffFreq*i));
+                var xValue = (diffFreq*i);
                 var xAsis = xValue;
                 var yAsis = [];
 
